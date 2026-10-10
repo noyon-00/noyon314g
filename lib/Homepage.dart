@@ -26,61 +26,75 @@ class HomePage extends StatelessWidget {
                 color: const Color.fromARGB(255, 148, 30, 233),
               ),
             ),
-            ListTile(title: Text("Person"), leading: Icon(Icons.person)),
+            ListTile(
+              title: Text("Person"),
+              leading: Icon(Icons.person),
+              hoverColor: Colors.black,
+              onTap: () {},
+            ),
+            ListTile(
+              title: Text("Homepage"),
+              leading: Icon(Icons.home),
+              hoverColor: Colors.grey,
+              onTap: () {},
+            ),
           ],
         ),
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: TextButton(
-              onPressed: () {},
-              style: TextButton.styleFrom(
-                backgroundColor: Color.fromARGB(255, 152, 234, 54),
-                foregroundColor: Colors.white,
-                fixedSize: Size(100, 50),
-                side: BorderSide(),
-                elevation: 10,
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: TextButton(
+                onPressed: () {},
+                style: TextButton.styleFrom(
+                  backgroundColor: Color.fromARGB(255, 152, 234, 54),
+                  foregroundColor: Colors.white,
+                  fixedSize: Size(100, 50),
+                  side: BorderSide(),
+                  elevation: 10,
+                ),
+                child: Text("Text Button"),
               ),
-              child: Text("Text Button"),
             ),
-          ),
-          SizedBox(width: 10),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: ElevatedButton(
-              onPressed: () {},
-              style: ElevatedButton.styleFrom(
-                backgroundColor: const Color.fromARGB(255, 215, 129, 230),
-                foregroundColor: Colors.white,
-                fixedSize: Size(150, 20),
-                side: BorderSide(),
+            SizedBox(width: 10),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ElevatedButton(
+                onPressed: () {},
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color.fromARGB(255, 215, 129, 230),
+                  foregroundColor: Colors.white,
+                  fixedSize: Size(150, 20),
+                  side: BorderSide(),
+                ),
+                child: Text("Elevated Button"),
               ),
-              child: Text("Elevated Button"),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: OutlinedButton(
-              onPressed: () {},
-              style: OutlinedButton.styleFrom(
-                backgroundColor: Color.fromARGB(255, 145, 167, 134),
-                foregroundColor: Colors.white,
-                fixedSize: Size(200, 20),
-                side: BorderSide(),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: OutlinedButton(
+                onPressed: () {},
+                style: OutlinedButton.styleFrom(
+                  backgroundColor: Color.fromARGB(255, 145, 167, 134),
+                  foregroundColor: Colors.white,
+                  fixedSize: Size(200, 20),
+                  side: BorderSide(),
+                ),
+                child: Text("OutlinedButton"),
               ),
-              child: Text("OutlinedButton"),
             ),
-          ),
-          IconButton(
-            onPressed: () {},
-            style: IconButton.styleFrom(),
-            icon: Icon(Icons.login),
-          ),
-        ],
+            IconButton(
+              onPressed: () {},
+              style: IconButton.styleFrom(),
+              icon: Icon(Icons.login),
+            ),
+          ],
+        ),
       ),
     );
   }
