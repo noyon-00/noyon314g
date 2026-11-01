@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'Assignment3.dart';
+import 'package:noyon314g/Calculator_page.dart';
+import 'package:noyon314g/Container_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -34,10 +35,16 @@ class HomePage extends StatelessWidget {
               onTap: () {},
             ),
             ListTile(
-              title: Text("Homepage"),
-              leading: Icon(Icons.home),
+              title: Text("Calculator"),
+              leading: Icon(Icons.calculate),
               hoverColor: Colors.grey,
-              onTap: () {},
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Calculator()),
+                );
+              },
             ),
           ],
         ),
@@ -69,7 +76,12 @@ class HomePage extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => container()),
+                        );
+                      },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: const Color.fromARGB(
                           255,
@@ -81,7 +93,7 @@ class HomePage extends StatelessWidget {
                         fixedSize: Size(150, 20),
                         side: BorderSide(),
                       ),
-                      child: Text("Elevated Button"),
+                      child: Text("Container"),
                     ),
                   ),
                   Padding(
@@ -103,20 +115,6 @@ class HomePage extends StatelessWidget {
                     icon: Icon(Icons.login),
                   ),
                 ],
-              ),
-            ),
-            const Assignment3(),
-            SizedBox(
-              height: 200,
-              width: 200,
-
-              child: Card(
-                margin: EdgeInsets.all(30),
-                color: Colors.purple,
-                shadowColor: Colors.pinkAccent,
-                elevation: 30,
-                //shape: CircleBorder(),
-                child: Center(child: Image.asset('assets/images/flt.jpg')),
               ),
             ),
           ],
