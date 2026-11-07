@@ -30,7 +30,7 @@ class ListviewPage extends StatelessWidget {
             child: Row(
               children: [
                 Image.network(myItems[index]['img']!, height: 100, width: 100),
-                SizedBox(height: 20),
+                SizedBox(width: 20),
                 Text(
                   myItems[index]['title']!,
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),

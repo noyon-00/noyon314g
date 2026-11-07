@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:noyon314g/Calculator_page.dart';
 import 'package:noyon314g/Container_page.dart';
+import 'package:noyon314g/Registration_page.dart';
+import 'package:noyon314g/login_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -8,7 +10,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("HomePage"),
+        title: Text("Welcome to Home Page"),
         centerTitle: true,
         backgroundColor: const Color.fromARGB(255, 194, 41, 221),
         foregroundColor: const Color.fromARGB(255, 255, 255, 255),
@@ -61,15 +63,20 @@ class HomePage extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Loginpage()),
+                        );
+                      },
                       style: TextButton.styleFrom(
-                        backgroundColor: Color.fromARGB(255, 152, 234, 54),
+                        backgroundColor: Colors.black,
                         foregroundColor: Colors.white,
-                        fixedSize: Size(100, 50),
+                        fixedSize: Size(100, 20),
                         side: BorderSide(),
                         elevation: 10,
                       ),
-                      child: Text("Text Button"),
+                      child: Text("Login"),
                     ),
                   ),
                   SizedBox(width: 10),
@@ -83,12 +90,7 @@ class HomePage extends StatelessWidget {
                         );
                       },
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color.fromARGB(
-                          255,
-                          215,
-                          129,
-                          230,
-                        ),
+                        backgroundColor: const Color.fromARGB(255, 74, 49, 49),
                         foregroundColor: Colors.white,
                         fixedSize: Size(150, 20),
                         side: BorderSide(),
@@ -99,14 +101,21 @@ class HomePage extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: OutlinedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => Registrationpage(),
+                          ),
+                        );
+                      },
                       style: OutlinedButton.styleFrom(
-                        backgroundColor: Color.fromARGB(255, 145, 167, 134),
+                        backgroundColor: Colors.grey,
                         foregroundColor: Colors.white,
-                        fixedSize: Size(200, 20),
+                        fixedSize: Size(110, 20),
                         side: BorderSide(),
                       ),
-                      child: Text("OutlinedButton"),
+                      child: Text("Register"),
                     ),
                   ),
                   IconButton(
